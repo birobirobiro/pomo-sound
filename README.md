@@ -24,7 +24,7 @@
 
 ## 🚀 Tecnologias
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+Esse projeto será desenvolvido com as seguintes tecnologias:
 
 - HTML
 - CSS
