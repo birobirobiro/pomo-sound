@@ -11,3 +11,76 @@ body {
   color: #fff;
   font-family: "Poppins", sans-serif;
 }
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header {
+  height: 5rem;
+  background: rgba(192, 60, 60, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.header p {
+  font-size: 20px;
+  font-weight: 700;
+  color: #f1f1f1;
+}
+
+.pomodoro {
+  display: flex;
+  gap: 10px;
+}
+.container {
+  display: flex;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flex-container img {
+  width: 6rem;
+  padding: 0.3rem;
+  opacity: 0.5;
+}
+
+.flex-container input {
+  margin-left: 1.1rem;
+}
+
+.flex-container:hover img {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#sound-types {
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  max-width: 100vh;
+  min-height: 100vh;
+}
+
+footer {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 4rem;
+  opacity: 0.7;
+}
