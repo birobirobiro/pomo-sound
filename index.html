@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,114 @@
   <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
   <title>Pomo Sound | Muito mais que um simples pomodoro</title>
 </head>
+
 <body>
- 
+  <div class="header">
+    <div class="logo">
+      <p>Pomo Sound</p>
+    </div>
+
+    <div class="pomodoro">
+      <img src="./assets/img/site/svgexport-12.svg">
+      <p>25:00</p>
+    </div>
+  </div>
+
+  <main id="sound-types" class="container">
+    <div data-key="rain" class="flex-container ">
+      <img src="/assets/img/img-sounds/Rain.svg" alt="Rain" title="Rain" class="">
+      <input type="range" min="0" max="100" class="">
+    </div>
+    <div data-key="thunderstorm" class="flex-container ">
+      <img src="/assets/img/img-sounds/Thunderstorm.svg" alt="Thunderstorm" title="Thunderstorm" class="">
+      <input type="range" min="0" max="100" class="">
+    </div>
+    <div data-key="wind" class="flex-container ">
+      <img src="assets/img/img-sounds/Wind.svg" alt="Wind" title="Wind" class="">
+      <input type="range" min="0" max="100" class="">
+    </div>
+    <div data-key="forest" class="flex-container ">
+      <img src="assets/img/img-sounds/Forest.svg" alt="Forest" title="Forest" class="">
+      <input type="range" min="0" max="100" class="">
+    </div>
+    <div data-key="leaves" class="flex-container ">
+      <img src="assets/img/img-sounds/Leaves.svg" alt="Leaves" title="Leaves" class="">
+      <input type="range" min="0" max="100" class="">
+    </div>
+    <div data-key="waterstream" class="flex-container ">
+      <img src="assets/img/img-sounds/Water stream.svg" alt="Water Stream" title="Water Stream" class="">
+      <input type="range" min="0" max="100" class="">
+    </div>
+    <div data-key="seaside" class="flex-container ">
+      <img src="assets/img/img-sounds/Seaside.svg" alt="Seaside" title="Seaside" class="">
+      <input type="range" min="0" max="100" class="">
+    </div>
+    <div data-key="water" class="flex-container ">
+      <img src="assets/img/img-sounds/Water.svg" alt="Water" title="Water" class="">
+      <input type="range" min="0" max="100" class="">
+    </div>
+    <div data-key="fire" class="flex-container ">
+      <img src="assets/img/img-sounds/Fireplace.svg" alt="Fire" title="Fire" class="">
+      <input type="range" min="0" max="100" class="">
+    </div>
+    <div data-key="summernight" class="flex-container ">
+      <img src="assets/img/img-sounds/Summer night.svg" alt="Summer Night" title="Summer Night" class="">
+      <input type="range" min="0" max="100" class="">
+    </div>
+    <div data-key="coffee" class="flex-container ">
+      <img src="assets/img/img-sounds/Coffee shop.svg" alt="Coffee" title="Coffee" class="">
+      <input type="range" min="0" max="100" class="">
+    </div>
+    <div data-key="train" class="flex-container ">
+      <img src="assets/img/img-sounds/Train.svg" alt="Train" title="Train" class="">
+      <input type="range" min="0" max="100" class="">
+    </div>
+    <div data-key="fan" class="flex-container ">
+      <img src="assets/img/img-sounds/Fan.svg" alt="Fan" title="Fan" class="">
+      <input type="range" min="0" max="100" class="">
+    </div>
+    <div data-key="whitenoise" class="flex-container ">
+      <img src="assets/img/img-sounds/White noise.svg" alt="White noise" title="White noise" class="">
+      <input type="range" min="0" max="100" class="">
+    </div>
+    <div data-key="pinknoise" class="flex-container ">
+      <img src="assets/img/img-sounds/Pink noise.svg" alt="Pink noise" title="Pink noise" class="">
+      <input type="range" min="0" max="100" class="">
+    </div>
+    <div data-key="brownnoise" class="flex-container ">
+      <img src="assets/img/img-sounds/Brown noise.svg" alt="Brown noise" title="Brown noise" class="">
+      <input type="range" min="0" max="100" class="">
+    </div> <div data-key="cicadas" class="flex-container ">
+      <img src="assets/img/img-sounds/Cicadas.svg" alt="cicadas" title="Cicadas" class="">
+      <input type="range" min="0" max="100" class="">
+    </div> <div data-key="city" class="flex-container ">
+      <img src="assets/img/img-sounds/Cityscape.svg" alt="City" title="City" class="">
+      <input type="range" min="0" max="100" class="">
+    </div>
+  </main>
+
+  <audio data-key="rain" src="assets/sounds/rain.ogg" loop></audio>
+  <audio data-key="thunderstorm" src="assets/sounds/thunderstorm.ogg" loop></audio>
+  <audio data-key="wind" src="assets/sounds/wind.ogg" loop></audio>
+  <audio data-key="forest" src="assets/sounds/forest.ogg" loop></audio>
+  <audio data-key="leaves" src="assets/sounds/leaves.ogg" loop></audio>
+  <audio data-key="waterstream" src="assets/sounds/waterstream.ogg" loop></audio>
+  <audio data-key="seaside" src="assets/sounds/seaside.ogg" loop></audio>
+  <audio data-key="water" src="assets/sounds/water.ogg" loop></audio>
+  <audio data-key="fire" src="assets/sounds/fire.ogg" loop></audio>
+  <audio data-key="summernight" src="assets/sounds/summernight.ogg" loop></audio>
+  <audio data-key="coffee" src="assets/sounds/coffee.ogg" loop></audio>
+  <audio data-key="train" src="assets/sounds/train.ogg" loop></audio>
+  <audio data-key="fan" src="assets/sounds/fan.ogg" loop></audio>
+  <audio data-key="whitenoise" src="assets/sounds/whitenoise.ogg" loop></audio>
+  <audio data-key="pinknoise" src="assets/sounds/pinknoise.ogg" loop></audio>
+  <audio data-key="brownnoise" src="assets/sounds/brownnoise.ogg" loop></audio>
+  <audio data-key="cicadas" src="assets/sounds/cicadas.mp4" loop></audio>
+  <audio data-key="city" src="assets/sounds/city.mp4" loop></audio>
+
 </body>
+<footer>
+  <a href="http://birobirobiro.dev" target="_blank">birobirobiro.dev</a>
+</footer>
+
 </html>
