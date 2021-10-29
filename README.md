@@ -19,7 +19,7 @@
 <br>
 
 <p align="center">
-  <img alt="Logo Pomo Sound" src=".github/logo.png" width="100%">
+  <img alt="Logo Pomo Sound" src=".github/logo.png" width="50%">
 </p>
 
 ## 🚀 Tecnologias
