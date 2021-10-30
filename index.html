@@ -17,13 +17,42 @@
       <p>Pomo Sound</p>
     </div>
 
-    <div class="pomodoro">
-      <img src="./assets/img/site/svgexport-12.svg">
-      <p>25:00</p>
+    <div>
+      <input type="checkbox" class="checkbox" id="chk" />
+      <label class="label" for="chk">
+        <img src="./assets/img/site/sun.svg" alt="" srcset="">
+        <img src="./assets/img/site/moon.svg" alt="" srcset="">
+        <div class="ball"></div>
+      </label>
     </div>
   </div>
 
-  <main id="sound-types" class="container">
+
+  <div class="pomodoro">
+    <div class="timer">
+      <span id="minutes">25</span>
+      <span id="colon">:</span>
+      <span id="seconds">00</span>
+    </div>
+  </div>
+
+  <div id="buttons">
+    <button id="work" title="Play 25 min">
+      <img src="./assets/img/site/play.svg">
+    </button>
+    <button id="shortBreak" title="Play 5 min">
+      <img src="./assets/img/site/coffee-short.svg" alt="Café curto">
+    </button>
+    <button id="longBreak" title="Play 15 min">
+      <img src="./assets/img/site/coffe-long.svg" alt="Café longo" srcset="">
+    </button>
+    <button id="stop" title="Stop">
+      <img src="./assets/img/site/stop.svg">
+    </button>
+  </div>
+
+  <main id="sound-types" class="container active">
+
     <div data-key="rain" class="flex-container ">
       <img src="/assets/img/img-sounds/Rain.svg" alt="Rain" title="Rain" class="">
       <input type="range" min="0" max="100" class="">
@@ -87,37 +116,61 @@
     <div data-key="brownnoise" class="flex-container ">
       <img src="assets/img/img-sounds/Brown noise.svg" alt="Brown noise" title="Brown noise" class="">
       <input type="range" min="0" max="100" class="">
-    </div> <div data-key="cicadas" class="flex-container ">
+    </div>
+    <div data-key="cicadas" class="flex-container ">
       <img src="assets/img/img-sounds/Cicadas.svg" alt="cicadas" title="Cicadas" class="">
       <input type="range" min="0" max="100" class="">
-    </div> <div data-key="city" class="flex-container ">
+    </div>
+    <div data-key="city" class="flex-container ">
       <img src="assets/img/img-sounds/Cityscape.svg" alt="City" title="City" class="">
       <input type="range" min="0" max="100" class="">
     </div>
   </main>
 
-  <audio data-key="rain" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/rain.ogg?raw=true" loop></audio>
-  <audio data-key="thunderstorm" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/thunderstorm.ogg?raw=true" loop></audio>
-  <audio data-key="wind" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/wind.ogg?raw=true" loop></audio>
-  <audio data-key="forest" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/forest.ogg?raw=true" loop></audio>
-  <audio data-key="leaves" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/leaves.ogg?raw=true" loop></audio>
-  <audio data-key="waterstream" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/waterstream.ogg?raw=true" loop></audio>
-  <audio data-key="seaside" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/seaside.ogg?raw=true" loop></audio>
-  <audio data-key="water" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/water.ogg?raw=true" loop></audio>
-  <audio data-key="fire" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/fire.ogg?raw=true" loop></audio>
-  <audio data-key="summernight" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/summernight.ogg?raw=true" loop></audio>
-  <audio data-key="coffee" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/coffee.ogg?raw=true" loop></audio>
-  <audio data-key="train" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/train.ogg?raw=true" loop></audio>
-  <audio data-key="fan" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/fan.ogg?raw=true" loop></audio>
-  <audio data-key="whitenoise" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/whitenoise.ogg?raw=true" loop></audio>
-  <audio data-key="pinknoise" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/pinknoise.ogg?raw=true" loop></audio>
-  <audio data-key="brownnoise" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/brownnoise.ogg?raw=true" loop></audio>
-  <audio data-key="cicadas" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/cicadas.mp4?raw=true" loop></audio>
-  <audio data-key="city" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/city.mp4?raw=true" loop></audio>
+  <button id="btn-mute" title="Mute/Unmute" class="active"></button>
+
+  <audio data-key="rain" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/rain.ogg?raw=true"
+    loop></audio>
+  <audio data-key="thunderstorm"
+    src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/thunderstorm.ogg?raw=true" loop></audio>
+  <audio data-key="wind" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/wind.ogg?raw=true"
+    loop></audio>
+  <audio data-key="forest"
+    src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/forest.ogg?raw=true" loop></audio>
+  <audio data-key="leaves"
+    src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/leaves.ogg?raw=true" loop></audio>
+  <audio data-key="waterstream"
+    src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/waterstream.ogg?raw=true" loop></audio>
+  <audio data-key="seaside"
+    src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/seaside.ogg?raw=true" loop></audio>
+  <audio data-key="water" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/water.ogg?raw=true"
+    loop></audio>
+  <audio data-key="fire" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/fire.ogg?raw=true"
+    loop></audio>
+  <audio data-key="summernight"
+    src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/summernight.ogg?raw=true" loop></audio>
+  <audio data-key="coffee"
+    src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/coffee.ogg?raw=true" loop></audio>
+  <audio data-key="train" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/train.ogg?raw=true"
+    loop></audio>
+  <audio data-key="fan" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/fan.ogg?raw=true"
+    loop></audio>
+  <audio data-key="whitenoise"
+    src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/whitenoise.ogg?raw=true" loop></audio>
+  <audio data-key="pinknoise"
+    src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/pinknoise.ogg?raw=true" loop></audio>
+  <audio data-key="brownnoise"
+    src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/brownnoise.ogg?raw=true" loop></audio>
+  <audio data-key="cicadas"
+    src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/cicadas.mp4?raw=true" loop></audio>
+  <audio data-key="city" src="https://github.com/birobirobiro/pomo-sound-assets/blob/master/sounds/city.mp4?raw=true"
+    loop></audio>
 
 </body>
 <footer>
   <a href="http://birobirobiro.dev" target="_blank">birobirobiro.dev</a>
 </footer>
+
+<script src="main.js"></script>
 
 </html>
