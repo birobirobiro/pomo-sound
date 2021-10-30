@@ -17,9 +17,55 @@ a {
   color: #fff;
 }
 
+input, button, submit { border:none; } 
+
+
+body.dark {
+	background: #1a1b1e;
+}
+
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+.label {
+	background-color: #000;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+	transform: scale(1.5);
+}
+
+.label .ball{
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
+
+.label img {
+  width: 15px;
+  height: 15px;
+}
+
 .header {
   height: 5rem;
-  background: rgba(192, 60, 60, 0.25);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -37,12 +83,75 @@ a {
 }
 
 .pomodoro {
+  align-self: center;
+  margin: 0 auto;
+  padding-top: 2.5rem;
+  width: 10rem;
+  height: 7rem;
+}
+
+.pomodoro span {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.timer {
+  border: 2px solid #FFF;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#buttons {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: #fff solid 2px;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 5px 10px 5px 10px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+#buttons button {
+  background: none;
+}
+
+.theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
 }
+
+.theme img {
+  width: 30px;
+  height: 30px;
+}
+
 .container {
   display: flex;
   margin: 0 auto;
+}
+
+button:hover, button:active, img:hover, img:active {
+  cursor: pointer;
+}
+
+input[type="range"] {
+  visibility: hidden;
+}
+
+input[type="range"].slider-active {
+  visibility: visible;
+}
+
+input[type="range"].flex-container img {
+  opacity: 1;
+}
+
+.active {
+  opacity: 1;
 }
 
 .flex-container {
@@ -50,12 +159,14 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 1.25rem;
 }
 
 .flex-container img {
   width: 6rem;
   padding: 0.3rem;
   opacity: 0.5;
+  padding-bottom: 0.7rem;
 }
 
 .flex-container input {
@@ -63,8 +174,8 @@ a {
 }
 
 .flex-container:hover img {
-  opacity: 1;
   cursor: pointer;
+  opacity: 1;
 }
 
 #sound-types {
@@ -81,6 +192,6 @@ footer {
   width: 100%;
   height: 100%;
   text-align: center;
-  padding-top: 4rem;
+  padding-top: 3rem;
   opacity: 0.7;
 }
