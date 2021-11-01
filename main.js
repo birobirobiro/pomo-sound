@@ -41,8 +41,6 @@ function setButtonEvents() {
   })
 
   buttonMute.addEventListener("click", event => {
-    buttonMute.classList.toggle("fa-volume-up")
-    buttonMute.classList.toggle("fa-volume-off")
 
     const audios = document.querySelectorAll("audio")
     audios.forEach(audio => {
